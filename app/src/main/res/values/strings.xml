@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application Remember the number game</string>
+    <string name="logo">Запомни число</string>
+    <string name="hint_user_field">Введи число</string>
+    <string name="main_btn">Ответ</string>
+    <string name="further_btn">Далее</string>
+    <string name="level_btn1">1 LVL</string>
+    <string name="level_btn2">2 LVL</string>
+    <string name="level_btn3">3 LVL</string>
+    <string name="no_user_input">Введите число</string>
+    <string name="no_user_input1">Выбирите уровень сложности</string>
+    <string name="seconds_settings_btn">Настройки секунд</string>
+    <string name="back_btn">Вернуться</string>
+
+</resources>
