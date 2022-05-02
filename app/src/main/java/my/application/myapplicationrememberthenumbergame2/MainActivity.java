@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     private int numberMAX;
     private int numberMIN;
     private Button seconds_settings_btn;
+    private TextView txtpass;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +41,16 @@ public class MainActivity extends AppCompatActivity {
         main_btn = findViewById(R.id.main_btn);
         result_info = findViewById(R.id.result_info);
         further_btn = findViewById(R.id.further_btn);
-        seconds = 2;
         level_btn1 = findViewById(R.id.level_btn1);
         level_btn2 = findViewById(R.id.level_btn2);
         level_btn3 = findViewById(R.id.level_btn3);
         seconds_settings_btn = findViewById(R.id.seconds_settings_btn);
+        txtpass = findViewById(R.id.txtpass);
 
+
+        txtpass.setText(getIntent().getStringExtra("pass"));
+        Intent intent = getIntent();
+        int seconds = intent.getIntExtra("pass",2);
 
 
         View.OnClickListener oclseconds_settings_btn = new View.OnClickListener() {
@@ -102,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 rInt = (int) ((Math.random() * ((numberMAX-numberMIN)+1))+numberMAX);
                 info.setText(Integer.toString(rInt));
 
+
                 CountDownTimer my_timer = new CountDownTimer(seconds*1000,1000) {
                     @Override
                     public void onTick(long millisUntilFinished) {
@@ -134,9 +142,11 @@ public class MainActivity extends AppCompatActivity {
                         user_field.setText("");
                     } else {
                         result_info.setText("Неверно");
+                        user_field.setText("");
                     }
                 }
             }
         });
     }
+
 }

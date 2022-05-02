@@ -11,5 +11,6 @@
     <string name="no_user_input1">Выбирите уровень сложности</string>
     <string name="seconds_settings_btn">Настройки секунд</string>
     <string name="back_btn">Вернуться</string>
-
+    <string name="vvod_sec">Введите количество секунд</string>
+    <string name="confirm_sec_btn">Подтвердить</string>
 </resources>
